@@ -1,22 +1,15 @@
 # Проект "Yamdb"
 ### Описание
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles).
-Произведения делятся на категории (Category): «Книги», «Фильмы», «Музыка».
-### Технологии
-Python 3.9.1
-Django 3.0.5
-### Запуск проекта в dev-режиме
-- Установите и активируйте виртуальное окружение
-- Установите зависимости из файла requirements.txt
+### Команда для запуска приложения
 ```
-pip install -r requirements.txt
-``` 
-- В папке с файлом manage.py выполните команду:
-```
-python3 manage.py runserver
+docker-compose up -d --build 
 ```
 ### Команда для создания суперпользователя
 ```
-python3 manage.py createsuperuser
+docker-compose exec web python manage.py createsuperuser
 ```
 ### Команда для заполнения базы начальными данными
+```
+docker-compose exec web python manage.py loaddata fixtures.json
+```
