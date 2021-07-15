@@ -9,6 +9,10 @@ docker-compose up -d --build
 ```
 docker-compose exec web python manage.py createsuperuser
 ```
+### Команда для создания миграций
+```
+docker-compose exec web python manage.py migrate
+```
 ### Команда для заполнения базы начальными данными
 ```
 docker-compose exec web python manage.py loaddata fixtures.json
